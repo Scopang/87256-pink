@@ -11,8 +11,8 @@
 
     <header class="page-header">
       <div class="wrap">
-        <a href="#logo" class="page-header__wrap-logo"></a>
-        <a href="#open-nav" class="page-header__wrap-icon-open-nav"></a>
+        <!--<a href="#logo" class="page-header__wrap-logo"></a>
+        <a href="#open-nav" class="page-header__wrap-icon-open-nav"></a>-->
         <nav class="main-nav main-nav--open">
           <a href="#logo" class="main-nav__wrap-logo"></a>
           <a href="#close" class="main-nav__wrap-icon-close-nav">Закрыть</a>
@@ -74,7 +74,7 @@
           </h1>
         </div>
       </div>
-      <!--=====Список преимуществ====================================================-->
+    <!--=====Список преимуществ====================================================-->
       <section class="advantage-app__item">
         <h2 class="h2-title">Поднимает настроение</h2>
         <p class="advantage-app__item-caption">
@@ -99,26 +99,94 @@
 
     <section class="reviews">
       <div class="wrap">
-        <h2 class="h2-names">Николай Петров</h2>
-        <article class="reviews__item">
-          «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+        <article class="reviews-item reviews-item--slide1">
+          <h2 class="h2-names">Николай Петров</h2>
+          <p class="reviews-item__caption">
+            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+          </p>
         </article>
-        <h2 class="h2-names">Николай Петров</h2>
-        <article class="reviews__item">
-          «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+        <article class="reviews-item reviews-item--slide2">
+          <h2 class="h2-names">Николай Петров</h2>
+          <p class="reviews-item__caption">
+            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+          </p>
         </article>
-        <h2 class="h2-names">Николай Петров</h2>
-        <article class="reviews__item">
-          «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+        <article class="reviews-item reviews-item--slide3">
+          <h2 class="h2-names">Николай Петров</h2>
+          <p class="reviews-item__caption">
+            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+          </p>
         </article>
       </div>
     </section>
 
-    <!--=====ЦЕНЫ====================================================-->
+    <!--=====ЦЕНЫ===================================================-->
 
     <section class="prices">
       <div class="wrap">
+        <table class="compare-table">
+    <!--=====Заглавный ряд===================================================-->
+          <tr class="compare-table__row">
+            <th class="compare-table__title">
+              <h2 class="h2-names uppercase">Лайт</h2>
+              <span class="act-price">0,99 USD</span>
+            </th>
+            <th class="compare-table__title">
+              <h2 class="h2-names uppercase">Стандарт</h2>
+              <span class="act-price">3,99 USD</span>
+            </th>
+            <th class="compare-table__title">
+              <h2 class="h2-names uppercase">Максимум</h2>
+              <span class="act-price">6,99 USD</span>
+            </th>
+          </tr>
+    <!--=====Первый ряд===================================================-->
+          <tr class="compare-table__row">
+            <td class="compare-table__data">
+              Розовый фильтр
+              <span class="green-check-icon"></span>
+            </td>
+            <td class="compare-table__data">
+              Розовый фильтр
+              <span class="green-check-icon"></span>
+            </td>
+            <td class="compare-table__data">
+              Розовый фильтр
+              <span class="green-check-icon"></span>
+            </td>
+          </tr>
+    <!--=====Второй ряд===================================================-->
+          <tr class="compare-table__row">
 
+            <td class="compare-table__data">
+              Смайлики
+              <span class="red-cross-icon"></span>
+            </td>
+            <td class="compare-table__data">
+              Смайлики
+              <span class="green-check-icon"></span>
+            </td>
+            <td class="compare-table__data">
+              Смайлики
+              <span class="green-check-icon"></span>
+            </td>
+          </tr>
+    <!--=====Третий ряд===================================================-->
+          <tr class="compare-table__row">
+            <td class="compare-table__data">
+              Комментарии
+              <span class="red-cross-icon"></span>
+            </td>
+            <td class="compare-table__data">
+              Комментарии
+              <span class="red-cross-icon"></span>
+            </td>
+            <td class="compare-table__data">
+              Комментарии
+              <span class="green-check-icon"></span>
+            </td>
+          </tr>
+        </table>
       </div>
     </section>
 
@@ -126,14 +194,29 @@
 
     <section class="contacts">
       <div class="wrap">
-        <h1 class="h1-title">Остались вопросы? Свяжитесь с нами!</h1>
-        <h2 class="h2-title">Звоните</h2>
-        <h2 class="h2-title">Пишите</h2>
-        <h2 class="h2-title">Приезжайте в гости</h2>
+        <div class="contacts-title">
+          <h1 class="h1-title">Остались вопросы? Свяжитесь с нами!</h1>
+        </div>
+        <article class="contacts__item">
+          <h2 class="h2-title">Звоните</h2>
+          <p class="contacts-text">+7&nbsp;(812)&nbsp;555-66-66</p>
+        </article>
+        <article class="contacts__item">
+          <h2 class="h2-title">Пишите</h2>
+          <p class="contacts-text">mail@htmlacademy.ru</p>
+        </article>
+        <article class="contacts__item">
+          <h2 class="h2-title">Приезжайте в гости</h2>
+          <p class="contacts-text">ул. Большая Конюшенная,&nbsp;19/8</p>
+        </article>
       </div>
     </section>
 
+  <!--=====КАРТА====================================================-->
+  <figure class="map">
+    <div class="wrap">Тут будет карта</div>
+  </figure>
 
-  <!-- <script src="js/script.js"></script> -->
+    <!-- <script src="js/script.js"></script> -->
   </body>
 </html>
