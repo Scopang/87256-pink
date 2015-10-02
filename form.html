@@ -1,10 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
 
-</body>
+  <!--=====ХЕДЕР====================================================-->
+
+    <header class="page-header">
+      <div class="wrap">
+        <a href="#logo" class="logo-1"></a>
+        <a href="#menu" class="icon-menu-open"></a>
+        <nav class="main-nav main-nav--open">
+          <a href="#logo" class="logo-1"></a>
+          <a href="#close" class="icon-menu-close">Закрыть</a>
+          <ul class="main-nav__list main-nav__list--show">
+            <li class="main-nav__item">
+              <a href="#info" class="main-nav__link">Информация</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#blog" class="main-nav__link">Блог</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#reviews" class="main-nav__link">Отзывы</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html" class="main-nav__link">Конкурс</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+  <!--=====МЭЙН/ФОРМА====================================================-->
+
+    <main class="page-main">
+      <h1 class="h1-title">Конкурс на самое безбашеное путешествие с Пинк</h1>
+      <form action="#" class="form-contest" method="post">
+        <p class="text-type-1">
+          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
+        </p>
+  <!--=====Форма-ФИО==================================================-->
+        <fieldset class="form-contest__box">
+          <div class="form-contest__item">
+            <label for="first-name" class="form-contest__label-text">Имя:</label>
+            <input type="text" class="form-contest__text" name="first-name" id="first-name" placeholder="Введите ваше имя">
+          </div>
+          <div class="form-contest__item">
+            <label for="last-name" class="form-contest__label-text">Фамилия:</label>
+            <input type="text" class="form-contest__text" name="last-name" id="last-name" placeholder="Укажите фамилию">
+          </div>
+          <div class="form-contest__item">
+            <label for="last-last-name" class="form-contest__label-text">Отчество:</label>
+            <input type="text" class="form-contest__text" name="last-last-name" id="last-last-name" placeholder="Ну и отчество тоже">
+          </div>
+        </fieldset>
+   <!--=====Форма-Приложение==================================================-->
+        <fieldset class="form-contest__box form-contest__box--color-area">
+          <legend class="form-contest__label-text">С каким приложением вы пешествовали?*</legend>
+          <label class="form-contest__label-radio">
+            <input type="radio" name="radio-app" value="iOS">
+            <span class="radio__ind"></span>
+            Pink для iOS
+          </label>
+          <label class="form-contest__label-radio">
+            <input type="radio" name="radio-app" value="Android">
+            <span class="radio__ind"></span>
+            Pink на Android
+          </label>
+          <label class="form-contest__label-radio">
+            <input type="radio" name="radio-app" value="Windows Phone">
+            <span class="radio__ind"></span>
+            Windows Phone
+          </label>
+        </fieldset>
+  <!--=====Форма-Даты путешествий==================================================-->
+        <fieldset class="form-contest__box">
+          <legend class="form-contest__label-text">Когда вы путешествовали?*</legend>
+        </fieldset>
+
+
+
+
+      </form>
+    </main>
+
+
+  </body>
 </html>
