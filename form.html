@@ -12,11 +12,11 @@
       <div class="wrap">
         <a href="#logo" class="logo-1"></a>
         <input class="checkbox-menu" type="checkbox" id="checkbox-menu" name="checkbox-menu">
-        <a href="#menu" class="icon-menu">Открыть</a>
-        <nav class="main-nav main-nav--open">
+        <label class="icon-menu" for="checkbox-menu">Открыть</label>
+        <nav class="main-nav main-nav--show">
           <a href="#logo" class="logo-1"></a>
-          <a href="#close" class="icon-menu icon-menu--close">Закрыть</a>
-          <ul class="main-nav__list main-nav__list--show">
+          <label class="icon-menu icon-menu--close" for="checkbox-menu">Закрыть</label>
+          <ul class="main-nav__list">
             <li class="main-nav__item">
               <a href="#info" class="main-nav__link">Информация</a>
             </li>
@@ -31,6 +31,13 @@
             </li>
           </ul>
         </nav>
+        <!--Тогда для реализации этого управления мы можем использовать следующие селекторы
+        .main-nav {
+        /* по умолчанию меню скрыто */
+        }
+        .checkbox-menu:checked + .main-nav {
+        /* отображаем меню, когда чекбокс включен */
+        }-->
       </div>
     </header>
 
@@ -39,7 +46,7 @@
     <main class="page-main">
       <h1 class="h1-title">Конкурс на самое безбашеное путешествие с Пинк</h1>
       <form action="#" class="form-contest" method="post">
-        <p class="text-type-1">
+        <p class="text-type">
           Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
         </p>
   <!--=====Форма-ФИО==================================================-->
@@ -63,21 +70,18 @@
   <!--=====Форма-Приложение==================================================-->
         <fieldset class="form-contest__box form-contest__box--color-area">
           <legend class="form-contest__header-box">С каким приложением вы путешествовали? *</legend>
-          <label class="radio">
-            <input class="radio__input" type="radio" name="radio-app" value="iOS" checked>
-            <span class="radio__indicator"></span>
-            Pink для iOS
-          </label>
-          <label class="radio">
-            <input class="radio__input" type="radio" name="radio-app" value="Android">
-            <span class="radio__indicator"></span>
-            Pink на Android
-          </label>
-          <label class="radio">
-            <input class="radio__input" type="radio" name="radio-app" value="Windows Phone">
-            <span class="radio__indicator"></span>
-            Windows Phone
-          </label>
+          <div class="radio">
+            <input class="radio__input" type="radio" id="ios-app" name="radio-app" value="iOS" checked>
+            <label class="radio__label" for="ios-app">Pink для iOS</label>
+          </div>
+          <div class="radio">
+            <input class="radio__input" type="radio" id="android-app" name="radio-app" value="Android">
+            <label class="radio__label" for="android-app">Pink на Android</label>
+          </div>
+          <div class="radio">
+            <input class="radio__input" type="radio" id="wp-app" name="radio-app" value="Windows Phone">
+            <label class="radio__label" for="wp-app">Windows Phone</label>
+          </div>
         </fieldset>
   <!--=====Форма-Даты путешествий==================================================-->
         <fieldset class="form-contest__box">
@@ -101,9 +105,9 @@
         <fieldset class="form-contest__box form-contest__box--color-area">
           <legend class="form-contest__header-box">Количество попутчиков *</legend>
           <div class="counter">
-            <button class="counter__button counter__button--left">—</button>
+            <button class="counter__button counter__button--minus">—</button>
             <input type="text" class="form-contest__text-input counter__input" name="total-imput" value="2 чел" disabled>
-            <button class="counter__button counter__button--right">+</button>
+            <button class="counter__button counter__button--plus">+</button>
           </div>
           <div class="separator-line"></div>
   <!--=====Первый попутчик==================================================-->
@@ -138,30 +142,38 @@
   <!--=====Форма-Достижения==================================================-->
         <fieldset class="form-contest__box">
           <legend class="form-contest__header-box">Ваши безбашенные достижения в путешествии *</legend>
-          <label class="checkbox" for="shark">
+          <div class="checkbox">
             <input class="checkbox__input" type="checkbox" id="shark" name="shark" checked>
-            <span class="checkbox__indicator"></span>Сделал селфи с акулой
-          </label>
-          <label class="checkbox" for="beach">
+            <label class="checkbox__label" for="shark">Сделал селфи с акулой</label>
+          </div>
+          <div class="checkbox">
             <input class="checkbox__input" type="checkbox" id="beach" name="beach" checked>
-            <span class="checkbox__indicator"></span>Обгорел на пляже
-          </label>
-          <label class="checkbox" for="chuck">
+            <label class="checkbox__label" for="beach">Обгорел на пляже</label>
+          </div>
+          <div class="checkbox">
             <input class="checkbox__input" type="checkbox" id="chuck" name="chuck">
-            <span class="checkbox__indicator"></span>Видел Чака Норриса
-          </label>
-          <label class="checkbox" for="souvenir">
+            <label class="checkbox__label" for="chuck">Видел Чака Норриса</label>
+          </div>
+          <div class="checkbox">
             <input class="checkbox__input" type="checkbox" id="souvenir" name="souvenir">
-            <span class="checkbox__indicator"></span>Накупил сувениров
-          </label>
-          <label class="checkbox" for="tower">
+            <label class="checkbox__label" for="souvenir">Накупил сувениров</label>
+          </div>
+          <div class="checkbox">
             <input class="checkbox__input" type="checkbox" id="tower" name="tower" checked>
-            <span class="checkbox__indicator"></span>Удержал башню
-          </label>
-          <label class="checkbox" for="hotel">
+            <label class="checkbox__label" for="tower">Удержал башню</label>
+          </div>
+          <div class="checkbox">
             <input class="checkbox__input" type="checkbox" id="hotel" name="hotel">
-            <span class="checkbox__indicator"></span>Разгромил отель
-          </label>
+            <label class="checkbox__label" for="hotel">Разгромил отель</label>
+          </div>
+        <!--Внешний div используется только как дополнительная обертка для удобства. Сам чекбокс будет нарисован при помощи псевдоэлемента у тега label. В стилях будут использоваться следующего вида селекторы
+        .checkbox__label:before {
+        /* стиль для отображения неактивного чекбокса */
+        }
+        .checkbox__input:checked + .checkbox__label:before {
+        /* стиль для отображения активного чекбокса */
+        }
+        Тот же самый подход можно использовать и в `radio`-->
         </fieldset>
   <!--=====Форма-Фото==================================================-->
         <fieldset class="form-contest__box form-contest__box--color-area">
@@ -221,7 +233,7 @@
           <li class="social-buttons__item"><a href="#youtube" class="social-links" title="YouTube">YouTube</a></li>
         </ul>
         <div class="developer">
-          <span class="text-type-1">Разработано <a href="#academy" class="logo-academy-1">HTML Academy</a></span>
+          <span class="text-type">Разработано <a href="#academy" class="logo-academy-1">HTML Academy</a></span>
         </div>
       </div>
     </footer>

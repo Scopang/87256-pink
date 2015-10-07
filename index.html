@@ -13,11 +13,11 @@
       <div class="wrap">
         <a href="#logo" class="logo-1"></a>
         <input class="checkbox-menu" type="checkbox" id="checkbox-menu" name="checkbox-menu">
-        <a href="#menu" class="icon-menu">Открыть</a>
-        <nav class="main-nav main-nav--open">
+        <label class="icon-menu" for="checkbox-menu">Открыть</label>
+        <nav class="main-nav">
           <a href="#logo" class="logo-1"></a>
-          <a href="#close" class="icon-menu icon-menu--close">Закрыть</a>
-          <ul class="main-nav__list main-nav__list--show">
+          <label class="icon-menu icon-menu--close" for="checkbox-menu">Закрыть</label>
+          <ul class="main-nav__list main-nav__list--show"><!--Забыл, зачем здесь модификатор. Он нужен точно?-->
             <li class="main-nav__item">
               <a href="#info" class="main-nav__link">Информация</a>
             </li>
@@ -32,6 +32,13 @@
             </li>
           </ul>
         </nav>
+        <!--Тогда для реализации этого управления мы можем использовать следующие селекторы
+        .main-nav {
+        /* по умолчанию меню скрыто */
+        }
+        .checkbox-menu:checked + .main-nav {
+        /* отображаем меню, когда чекбокс включен */
+        }-->
       </div>
     </header>
 
@@ -96,24 +103,27 @@
 
     <section class="reviews">
       <div class="wrap">
-        <blockquote class="reviews-item">
+        <blockquote class="reviews-item reviews-item--1">
           <h2 class="h2-title">Николай Петров</h2>
           <p class="text-type-1">
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
         </blockquote>
-        <blockquote class="reviews-item">
+        <blockquote class="reviews-item reviews-item--2">
           <h2 class="h2-title">Николай Петров</h2>
           <p class="text-type-1">
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
         </blockquote>
-        <blockquote class="reviews-item">
+        <blockquote class="reviews-item reviews-item--3">
           <h2 class="h2-title">Николай Петров</h2>
           <p class="text-type-1">
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
         </blockquote>
+        <input type="radio radio__input" id="review1" name="radio-review" checked>
+        <input type="radio radio__input" id="review2" name="radio-review">
+        <input type="radio radio__input" id="review3" name="radio-review">
       </div>
     </section>
 
