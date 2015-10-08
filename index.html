@@ -2,14 +2,228 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: pink</title>
+    <title>Pink</title>
     <!-- <link rel="stylesheet" href="css/style.css"> -->
   </head>
   <body>
 
-    <p>Репозиторий создан для обучения на интенсивном онлайн-курсе «<a href="https://htmlacademy.ru/advanced_intensive">Продвинутый HTML и CSS</a>».</p>
+    <!--=====ХЕДЕР====================================================-->
+
+    <header class="page-header">
+      <div class="wrap">
+        <a href="#logo" class="logo"></a>
+        <input class="checkbox-menu" type="checkbox" id="checkbox-menu" name="checkbox-menu">
+        <label class="icon-menu" for="checkbox-menu">Открыть</label>
+        <nav class="main-nav">
+          <a href="#logo" class="logo"></a>
+          <label class="icon-menu icon-menu--close" for="checkbox-menu">Закрыть</label>
+          <ul class="main-nav__list main-nav__list--show"><!--Забыл, зачем здесь модификатор. Он нужен точно?-->
+            <li class="main-nav__item">
+              <a href="#info" class="main-nav__link">Информация</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#blog" class="main-nav__link">Блог</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#reviews" class="main-nav__link">Отзывы</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="form.html" class="main-nav__link">Конкурс</a>
+            </li>
+          </ul>
+        </nav>
+        <!--Тогда для реализации этого управления мы можем использовать следующие селекторы
+        .main-nav {
+        /* по умолчанию меню скрыто */
+        }
+        .checkbox-menu:checked + .main-nav {
+        /* отображаем меню, когда чекбокс включен */
+        }-->
+      </div>
+    </header>
+
+    <!--=====ПРИЛОЖЕНИЯ====================================================-->
+
+    <article class="mob-app">
+      <div class="wrap">
+        <h1 class="h1-title">
+          Взгляните на жизнь иначе!
+        </h1>
+        <a href="#download" class="download-btn">Скачать приложение</a>
+        <div class="download-link">
+          <a class="download-link__icon  download-link__icon--apple" href="#apple">
+            Apple
+          </a>
+          <a class="download-link__icon  download-link__icon--android" href="#android">
+            Android
+          </a>
+          <a class="download-link__icon  download-link__icon--ms" href="#ms">
+            Microsoft
+          </a>
+        </div>
+        <p class="app-availible-text">
+          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+        </p>
+      </div>
+    </article>
+
+    <!--=====ПРЕИМУЩЕСТВА ПРИЛОЖЕНИЯ====================================================-->
+    <!--=====Заголовок====================================================-->
+    <section class="advantage-app">
+      <div class="wrap">
+        <h1 class="h1-title">
+          Устали от серости мегаполиса?
+        </h1>
+        <h1 class="h1-title">
+          Нам есть, что вам предложить!
+        </h1>
+      </div>
+    <!--=====Список преимуществ====================================================-->
+      <section class="advantage-app__item">
+        <h2 class="h2-title">Поднимает настроение</h2>
+        <p class="advantage-app__item-caption">
+          Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+        </p>
+      </section>
+      <section class="advantage-app__item">
+        <h2 class="h2-title">Меняет мир вокруг</h2>
+        <p class="advantage-app__item-caption">
+          Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+        </p>
+      </section>
+      <section class="advantage-app__item">
+        <h2 class="h2-title">Заводит новых друзей</h2>
+        <p class="advantage-app__item-caption">
+          Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+        </p>
+      </section>
+    </section>
+
+    <!--=====ОТЗЫВЫ====================================================-->
+
+    <section class="reviews">
+      <div class="wrap">
+        <blockquote class="reviews-item reviews-item--1">
+          <h2 class="h2-title">Николай Петров</h2>
+          <p class="text-type-1">
+            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+          </p>
+        </blockquote>
+        <blockquote class="reviews-item reviews-item--2">
+          <h2 class="h2-title">Николай Петров</h2>
+          <p class="text-type-1">
+            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+          </p>
+        </blockquote>
+        <blockquote class="reviews-item reviews-item--3">
+          <h2 class="h2-title">Николай Петров</h2>
+          <p class="text-type-1">
+            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+          </p>
+        </blockquote>
+        <input type="radio radio__input" id="review1" name="radio-review" checked>
+        <input type="radio radio__input" id="review2" name="radio-review">
+        <input type="radio radio__input" id="review3" name="radio-review">
+      </div>
+    </section>
+
+    <!--=====ЦЕНЫ===================================================-->
+
+    <section class="prices">
+      <div class="wrap">
+        <table class="compare-table">
+    <!--=====Заглавный ряд===================================================-->
+          <tr class="compare-table__row">
+            <th class="compare-table__title">
+              <h2 class="h2-names h2-names--uppercase">Лайт</h2>
+              <span class="compare-table__price">0,99 USD</span>
+            </th>
+            <th class="compare-table__title">
+              <h2 class="h2-names uppercase">Стандарт</h2>
+              <span class="compare-table__price">3,99 USD</span>
+            </th>
+            <th class="compare-table__title">
+              <h2 class="h2-names uppercase">Максимум</h2>
+              <span class="compare-table__price">6,99 USD</span>
+            </th>
+          </tr>
+    <!--=====Первый ряд===================================================-->
+          <tr class="compare-table__row">
+            <td class="compare-table__data">
+              Розовый фильтр
+              <span class="icon-yes-no icon-yes-no--green-check"></span>
+            </td>
+            <td class="compare-table__data">
+              Розовый фильтр
+              <span class="icon-yes-no icon-yes-no--green-check"></span>
+            </td>
+            <td class="compare-table__data">
+              Розовый фильтр
+              <span class="icon-yes-no icon-yes-no--green-check"></span>
+            </td>
+          </tr>
+    <!--=====Второй ряд===================================================-->
+          <tr class="compare-table__row">
+            <td class="compare-table__data">
+              Смайлики
+              <span class="icon-yes-no icon-yes-no--red-cross"></span>
+            </td>
+            <td class="compare-table__data">
+              Смайлики
+              <span class="icon-yes-no icon-yes-no--green-check"></span>
+            </td>
+            <td class="compare-table__data">
+              Смайлики
+              <span class="icon-yes-no icon-yes-no--green-check"></span>
+            </td>
+          </tr>
+    <!--=====Третий ряд===================================================-->
+          <tr class="compare-table__row">
+            <td class="compare-table__data">
+              Комментарии
+              <span class="icon-yes-no icon-yes-no--red-cross"></span>
+            </td>
+            <td class="compare-table__data">
+              Комментарии
+              <span class="icon-yes-no icon-yes-no--red-cross"></span>
+            </td>
+            <td class="compare-table__data">
+              Комментарии
+              <span class="icon-yes-no icon-yes-no--green-check"></span>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <!--=====КОНТАКТЫ====================================================-->
+
+    <section class="contacts">
+      <div class="wrap">
+        <div class="contacts-title">
+          <h1 class="h1-title">Остались вопросы? Свяжитесь с нами!</h1>
+        </div>
+        <article class="contacts__item">
+          <h2 class="h2-title">Звоните</h2>
+          <p class="contacts__text">+7&nbsp;(812)&nbsp;555-66-66</p>
+        </article>
+        <article class="contacts__item">
+          <h2 class="h2-title">Пишите</h2>
+          <p class="contacts__text">mail@htmlacademy.ru</p>
+        </article>
+        <article class="contacts__item">
+          <h2 class="h2-title">Приезжайте в гости</h2>
+          <p class="contacts__text">ул. Большая Конюшенная,&nbsp;19/8</p>
+        </article>
+      </div>
+    </section>
+
+    <!--=====КАРТА====================================================-->
+
+    <figure class="map">
+      <div class="wrap">Тут будет карта</div>
+    </figure>
 
     <!-- <script src="js/script.js"></script> -->
-
-  </body>
+    </body>
 </html>
