@@ -1,0 +1,42 @@
+.reviews-item {
+  display: none;
+  margin: 0;
+  padding-top: 44px;
+}
+.btn-radio {
+  text-align: center;
+
+  &__radio {
+    display: inline-block;
+    height: 6px;
+    width: 6px;
+    border: 3px solid @primary-color;
+    border-radius: 12px;
+    background-color: white;
+  }
+}
+
+.radio {
+  display: none;
+
+  &__input {
+    &--1:checked ~ .reviews-item--1 {
+      display: block;
+    }
+    &--2:checked ~ .reviews-item--2 {
+      display: block;
+    }
+    &--3:checked ~ .reviews-item--3 {
+      display: block;
+    }
+    &--1:checked ~ .radioo {
+      background-color: red;
+    }
+    &--2:checked ~ .radioo {
+      background-color: red;
+    }
+    &--3:checked ~ .radioo {
+      background-color: red;
+    }
+  }
+}

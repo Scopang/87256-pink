@@ -1,0 +1,63 @@
+.checkbox-menu {
+  display: none;
+
+  &:checked ~ .main-nav {
+    display: block;
+  }
+}
+
+.main-nav {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-color: @primary-color;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border-top: 1px solid #495562;
+    border-bottom: 1px solid #010000;
+
+    a {
+      display: inline-block;
+      width: 100%;
+      line-height: 62px;
+      text-decoration: none;
+      font-family: @font;
+      font-size: @font-size + 8px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: white;
+    }
+    a:hover{
+      color: darken(white, 50%);
+      background-color: lighten(#283645, 10%);
+    }
+  }
+}
+
+.icon-menu {
+  display: inline-block;
+  vertical-align: top;
+  width: 50px;
+  height: 24px;
+  margin: 21px 0 0 150px;
+  background: url('@{img}/open-menu.png') no-repeat 50% 50%;
+  cursor: pointer;
+
+  &--close {
+    background: url('@{img}/close-menu.png') no-repeat 100% 50%;
+  }
+}

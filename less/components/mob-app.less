@@ -1,0 +1,46 @@
+.mob-app .wrap{
+  background-color: #1d2631;
+  font-size: 0;
+  padding: 28px 0 30px 0;
+}
+
+.download-btn {
+  display: block;
+  margin: 0 20px 32px;
+  font: 600 1.8rem/1.8rem @font;
+  color: white;
+  line-height: 49px;
+  text-decoration: none;
+  text-align: center;
+  border: 3px solid white;
+  border-radius: 27px;
+
+  &:hover {
+    background-color: lighten(#1d2631, 10%);
+    border-color: darken(white, 70%);
+  }
+}
+
+.download-link {
+  height: 57px;
+  margin: 0 20px 21px;
+  text-align: center;
+
+  &__icon {
+    display: inline-block;
+    vertical-align: baseline;
+    width: 46px;
+    height: 57px;
+    margin: 0 17px;
+
+    &--apple{
+      background: url('@{img}/apple-logo.png') no-repeat 50% 50%;
+    }
+    &--android{
+      background: url('@{img}/android-logo.png') no-repeat 50% 70%;
+    }
+    &--ms{
+      background: url('@{img}/ms-logo.png') no-repeat 50% 70%;
+    }
+  }
+}

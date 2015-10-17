@@ -3,19 +3,24 @@
   <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
 
   <!--=====ХЕДЕР====================================================-->
 
     <header class="page-header">
-      <div class="wrap">
-        <a href="#logo" class="logo"></a>
+      <div class="wrap wrap__header">
         <input class="checkbox-menu" type="checkbox" id="checkbox-menu" name="checkbox-menu">
-        <label class="icon-menu" for="checkbox-menu">Открыть</label>
-        <nav class="main-nav main-nav--show">
-          <a href="#logo" class="logo"></a>
-          <label class="icon-menu icon-menu--close" for="checkbox-menu">Закрыть</label>
+        <div class="container">
+          <a href="index.html" class="logo"></a>
+          <label class="icon-menu" for="checkbox-menu"></label>
+        </div>
+        <nav class="main-nav">
+          <div class="container">
+            <a href="index.html" class="logo"><img src="./img/logo.png" alt="pink"></a>
+            <label class="icon-menu icon-menu--close" for="checkbox-menu"></label>
+          </div>
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a href="#info" class="main-nav__link">Информация</a>
@@ -44,188 +49,190 @@
   <!--=====МЭЙН/ФОРМА====================================================-->
 
     <main class="page-main">
-      <h1 class="h1-title">Конкурс на самое безбашеное путешествие с Пинк</h1>
-      <form action="#" class="form-contest" method="post">
-        <p class="text-type">
-          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
-        </p>
-  <!--=====Форма-ФИО==================================================-->
-        <fieldset class="form-contest__box">
-          <div class="form-contest__box-item">
-            <label class="text-label">Имя: *
-              <input class="text-input" type="text" name="first-name" placeholder="Введите ваше имя" required>
+      <div class="wrap">
+        <h1 class="h1-title">Конкурс на самое безбашеное путешествие с Пинк</h1>
+        <form action="#" class="form-contest" method="post">
+          <p class="text-type">
+            Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту! Пожалуйста, заполните форму ниже:
+          </p>
+    <!--=====Форма-ФИО==================================================-->
+          <fieldset class="form-contest__box">
+            <div class="form-contest__box-item">
+              <label class="text-label">Имя: *
+                <input class="text-input" type="text" name="first-name" placeholder="Введите ваше имя" required>
+              </label>
+            </div>
+            <div class="form-contest__box-item">
+              <label class="text-label">Фамилия: *
+                <input class="text-input" type="text" name="last-name" placeholder="Укажите фамилию" required>
+              </label>
+            </div>
+            <div class="form-contest__box-item">
+              <label class="text-label">Отчество:
+                <input class="text-input" type="text" name="last-last-name" placeholder="Ну и отчество тоже">
+              </label>
+            </div>
+          </fieldset>
+    <!--=====Форма-Приложение==================================================-->
+          <fieldset class="form-contest__box form-contest__box--color-area">
+            <legend class="form-contest__header-box">С каким приложением вы путешествовали? *</legend>
+            <div class="radio">
+              <input class="radio__input" type="radio" id="ios-app" name="radio-app" value="iOS" checked>
+              <label class="radio__label" for="ios-app">Pink для iOS</label>
+            </div>
+            <div class="radio">
+              <input class="radio__input" type="radio" id="android-app" name="radio-app" value="Android">
+              <label class="radio__label" for="android-app">Pink на Android</label>
+            </div>
+            <div class="radio">
+              <input class="radio__input" type="radio" id="wp-app" name="radio-app" value="Windows Phone">
+              <label class="radio__label" for="wp-app">Windows Phone</label>
+            </div>
+          </fieldset>
+    <!--=====Форма-Даты путешествий==================================================-->
+          <fieldset class="form-contest__box">
+            <legend class="form-contest__header-box">Когда вы путешествовали? *</legend>
+            <div class="form-contest__box-item">
+              <input type="text" class="text-input" id="departure-date" name="departure-date" value="1 апреля 2015">
+              <label class="text-label text-label--center" for="departure-date">Дата выезда</label>
+            </div>
+            <div class="counter">
+              <button class="counter__button counter__button--left">—</button>
+              <input type="text" class="text-input counter__input" id="total-days" name="total-days" value="10 дней">
+              <button class="counter__button counter__button--right">+</button>
+              <label class="text-label text-label--center" for="total-days">Продолжительность</label>
+            </div>
+            <div class="form-contest__box-item">
+              <input type="text" class="text-input" id="arrival-date" name="arrival-date" value="1 апреля 2015" disabled>
+              <label class="text-label text-label--center" for="arrival-date">Дата возвращения</label>
+            </div>
+          </fieldset>
+    <!--=====Форма-Попутчики==================================================-->
+          <fieldset class="form-contest__box form-contest__box--color-area">
+            <legend class="form-contest__header-box">Количество попутчиков *</legend>
+            <div class="counter">
+              <button class="counter__button counter__button--minus">—</button>
+              <input type="text" class="text-input counter__input" name="total-imput" value="2 чел" disabled>
+              <button class="counter__button counter__button--plus">+</button>
+            </div>
+            <div class="separator-line"></div>
+    <!--=====Первый попутчик==================================================-->
+            <div class="companion">
+              <div class="companion__number"><span class="text-label">№</span>
+                <div class="companion__counter">1</div>
+              </div>
+              <div class="companion__group">
+                <label class="text-label" for="companion-name">Имя: *</label>
+                <input class="text-input text-input--small-width" type="text" id="companion-name" name="companion-name" placeholder="Введите ваше имя" required>
+              </div>
+              <div class="companion__group">
+                <label for="companion-nickname" class="text-label required">Прозвище:</label>
+                <input class="text-input text-input--small-width" type="text" id="companion-nickname" name="companion-nickname" placeholder="Ну как же без этого!">
+              </div>
+            </div>
+    <!--=====Второй попутчик==================================================-->
+            <div class="companion">
+              <div class="companion__number"><span class="text-label">№</span>
+                <div class="companion__counter">2</div>
+              </div>
+              <div class="companion__group">
+                <label class="text-label" for="companion-name-2">Имя: *</label>
+                <input class="text-input text-input--small-width" type="text" id="companion-name-2" name="companion-name-2" placeholder="Введите ваше имя" required>
+              </div>
+              <div class="companion__group">
+                <label class="text-label" for="companion-nickname-2" required>Прозвище:</label>
+                <input class="text-input text-input--small-width" type="text" id="companion-nickname-2" name="companion-nickname-2" placeholder="Ну как же без этого!">
+              </div>
+            </div>
+          </fieldset>
+    <!--=====Форма-Достижения==================================================-->
+          <fieldset class="form-contest__box">
+            <legend class="form-contest__header-box">Ваши безбашенные достижения в путешествии *</legend>
+            <div class="checkbox">
+              <input class="checkbox__input" type="checkbox" id="shark" name="shark" checked>
+              <label class="checkbox__label" for="shark">Сделал селфи с акулой</label>
+            </div>
+            <div class="checkbox">
+              <input class="checkbox__input" type="checkbox" id="beach" name="beach" checked>
+              <label class="checkbox__label" for="beach">Обгорел на пляже</label>
+            </div>
+            <div class="checkbox">
+              <input class="checkbox__input" type="checkbox" id="chuck" name="chuck">
+              <label class="checkbox__label" for="chuck">Видел Чака Норриса</label>
+            </div>
+            <div class="checkbox">
+              <input class="checkbox__input" type="checkbox" id="souvenir" name="souvenir">
+              <label class="checkbox__label" for="souvenir">Накупил сувениров</label>
+            </div>
+            <div class="checkbox">
+              <input class="checkbox__input" type="checkbox" id="tower" name="tower" checked>
+              <label class="checkbox__label" for="tower">Удержал башню</label>
+            </div>
+            <div class="checkbox">
+              <input class="checkbox__input" type="checkbox" id="hotel" name="hotel">
+              <label class="checkbox__label" for="hotel">Разгромил отель</label>
+            </div>
+          <!--Внешний div используется только как дополнительная обертка для удобства. Сам чекбокс будет нарисован при помощи псевдоэлемента у тега label. В стилях будут использоваться следующего вида селекторы
+          .checkbox__label:before {
+          /* стиль для отображения неактивного чекбокса */
+          }
+          .checkbox__input:checked + .checkbox__label:before {
+          /* стиль для отображения активного чекбокса */
+          }
+          Тот же самый подход можно использовать и в `radio`-->
+          </fieldset>
+    <!--=====Форма-Фото==================================================-->
+          <fieldset class="form-contest__box form-contest__box--color-area">
+            <legend class="form-contest__header-box">Ваши фотографии из поездки *</legend>
+            <label for="photo" class="form__label">
+              <input class="form__hidden-input" type="file" id="photo" name="photo" required><span class="form__upload">Загрузить фото</span>
             </label>
-          </div>
-          <div class="form-contest__box-item">
-            <label class="text-label">Фамилия: *
-              <input class="text-input" type="text" name="last-name" placeholder="Укажите фамилию" required>
-            </label>
-          </div>
-          <div class="form-contest__box-item">
-            <label class="text-label">Отчество:
-              <input class="text-input" type="text" name="last-last-name" placeholder="Ну и отчество тоже">
-            </label>
-          </div>
-        </fieldset>
-  <!--=====Форма-Приложение==================================================-->
-        <fieldset class="form-contest__box form-contest__box--color-area">
-          <legend class="form-contest__header-box">С каким приложением вы путешествовали? *</legend>
-          <div class="radio">
-            <input class="radio__input" type="radio" id="ios-app" name="radio-app" value="iOS" checked>
-            <label class="radio__label" for="ios-app">Pink для iOS</label>
-          </div>
-          <div class="radio">
-            <input class="radio__input" type="radio" id="android-app" name="radio-app" value="Android">
-            <label class="radio__label" for="android-app">Pink на Android</label>
-          </div>
-          <div class="radio">
-            <input class="radio__input" type="radio" id="wp-app" name="radio-app" value="Windows Phone">
-            <label class="radio__label" for="wp-app">Windows Phone</label>
-          </div>
-        </fieldset>
-  <!--=====Форма-Даты путешествий==================================================-->
-        <fieldset class="form-contest__box">
-          <legend class="form-contest__header-box">Когда вы путешествовали? *</legend>
-          <div class="form-contest__box-item">
-            <input type="text" class="text-input" id="departure-date" name="departure-date" value="1 апреля 2015">
-            <label class="text-label text-label--center" for="departure-date">Дата выезда</label>
-          </div>
-          <div class="counter">
-            <button class="counter__button counter__button--left">—</button>
-            <input type="text" class="text-input counter__input" id="total-days" name="total-days" value="10 дней">
-            <button class="counter__button counter__button--right">+</button>
-            <label class="text-label text-label--center" for="total-days">Продолжительность</label>
-          </div>
-          <div class="form-contest__box-item">
-            <input type="text" class="text-input" id="arrival-date" name="arrival-date" value="1 апреля 2015" disabled>
-            <label class="text-label text-label--center" for="arrival-date">Дата возвращения</label>
-          </div>
-        </fieldset>
-  <!--=====Форма-Попутчики==================================================-->
-        <fieldset class="form-contest__box form-contest__box--color-area">
-          <legend class="form-contest__header-box">Количество попутчиков *</legend>
-          <div class="counter">
-            <button class="counter__button counter__button--minus">—</button>
-            <input type="text" class="text-input counter__input" name="total-imput" value="2 чел" disabled>
-            <button class="counter__button counter__button--plus">+</button>
-          </div>
-          <div class="separator-line"></div>
-  <!--=====Первый попутчик==================================================-->
-          <div class="companion">
-            <div class="companion__number"><span class="text-label">№</span>
-              <div class="companion__counter">1</div>
+            <div class="separator-line"></div>
+            <div class="photos">
+              <div class="photos__item">
+                <img src="" alt=""><span class="photos__name">Photo</span>
+                <a href="#" class="photos-remove" title="Удалить"></a>
+              </div>
+              <div class="photos__item">
+                <img src="" alt=""><span class="photos__name">Photo</span>
+                <a href="#" class="photos-remove" title="Удалить"></a>
+              </div>
+              <div class="photos__item">
+                <img src="" alt=""><span class="photos__name">Photo</span>
+                <a href="#" class="photos-remove" title="Удалить"></a>
+              </div>
+              <div class="photos__item">
+                <img src="" alt=""><span class="photos__name">Photo</span>
+                <a href="#" class="photos-remove" title="Удалить"></a>
+              </div>
+              <div class="photos__item">
+                <img src="" alt=""><span class="photos__name">Photo</span>
+                <a href="#" class="photos-remove" title="Удалить"></a>
+              </div>
+              <div class="photos__item">
+                <img src="" alt=""><span class="photos__name">Photo</span>
+                <a href="#" class="photos-remove" title="Удалить"></a>
+              </div>
+              <div class="photos__item">
+                <img src="" alt=""><span class="photos__name">Photo</span>
+                <a href="#" class="photos-remove" title="Удалить"></a>
+              </div>
+              <div class="photos__item">
+                <img src="" alt=""><span class="photos__name">Photo</span>
+                <a href="#" class="photos-remove" title="Удалить"></a>
+              </div>
             </div>
-            <div class="companion__group">
-              <label class="text-label" for="companion-name">Имя: *</label>
-              <input class="text-input text-input--small-width" type="text" id="companion-name" name="companion-name" placeholder="Введите ваше имя" required>
-            </div>
-            <div class="companion__group">
-              <label for="companion-nickname" class="text-label required">Прозвище:</label>
-              <input class="text-input text-input--small-width" type="text" id="companion-nickname" name="companion-nickname" placeholder="Ну как же без этого!">
-            </div>
-          </div>
-  <!--=====Второй попутчик==================================================-->
-          <div class="companion">
-            <div class="companion__number"><span class="text-label">№</span>
-              <div class="companion__counter">2</div>
-            </div>
-            <div class="companion__group">
-              <label class="text-label" for="companion-name-2">Имя: *</label>
-              <input class="text-input text-input--small-width" type="text" id="companion-name-2" name="companion-name-2" placeholder="Введите ваше имя" required>
-            </div>
-            <div class="companion__group">
-              <label class="text-label" for="companion-nickname-2" required>Прозвище:</label>
-              <input class="text-input text-input--small-width" type="text" id="companion-nickname-2" name="companion-nickname-2" placeholder="Ну как же без этого!">
-            </div>
-          </div>
-        </fieldset>
-  <!--=====Форма-Достижения==================================================-->
-        <fieldset class="form-contest__box">
-          <legend class="form-contest__header-box">Ваши безбашенные достижения в путешествии *</legend>
-          <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="shark" name="shark" checked>
-            <label class="checkbox__label" for="shark">Сделал селфи с акулой</label>
-          </div>
-          <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="beach" name="beach" checked>
-            <label class="checkbox__label" for="beach">Обгорел на пляже</label>
-          </div>
-          <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="chuck" name="chuck">
-            <label class="checkbox__label" for="chuck">Видел Чака Норриса</label>
-          </div>
-          <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="souvenir" name="souvenir">
-            <label class="checkbox__label" for="souvenir">Накупил сувениров</label>
-          </div>
-          <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="tower" name="tower" checked>
-            <label class="checkbox__label" for="tower">Удержал башню</label>
-          </div>
-          <div class="checkbox">
-            <input class="checkbox__input" type="checkbox" id="hotel" name="hotel">
-            <label class="checkbox__label" for="hotel">Разгромил отель</label>
-          </div>
-        <!--Внешний div используется только как дополнительная обертка для удобства. Сам чекбокс будет нарисован при помощи псевдоэлемента у тега label. В стилях будут использоваться следующего вида селекторы
-        .checkbox__label:before {
-        /* стиль для отображения неактивного чекбокса */
-        }
-        .checkbox__input:checked + .checkbox__label:before {
-        /* стиль для отображения активного чекбокса */
-        }
-        Тот же самый подход можно использовать и в `radio`-->
-        </fieldset>
-  <!--=====Форма-Фото==================================================-->
-        <fieldset class="form-contest__box form-contest__box--color-area">
-          <legend class="form-contest__header-box">Ваши фотографии из поездки *</legend>
-          <label for="photo" class="form__label">
-            <input class="form__hidden-input" type="file" id="photo" name="photo" required><span class="form__upload">Загрузить фото</span>
-          </label>
-          <div class="separator-line"></div>
-          <div class="photos">
-            <div class="photos__item">
-              <img src="" alt=""><span class="photos__name">Photo</span>
-              <a href="#" class="photos-remove" title="Удалить"></a>
-            </div>
-            <div class="photos__item">
-              <img src="" alt=""><span class="photos__name">Photo</span>
-              <a href="#" class="photos-remove" title="Удалить"></a>
-            </div>
-            <div class="photos__item">
-              <img src="" alt=""><span class="photos__name">Photo</span>
-              <a href="#" class="photos-remove" title="Удалить"></a>
-            </div>
-            <div class="photos__item">
-              <img src="" alt=""><span class="photos__name">Photo</span>
-              <a href="#" class="photos-remove" title="Удалить"></a>
-            </div>
-            <div class="photos__item">
-              <img src="" alt=""><span class="photos__name">Photo</span>
-              <a href="#" class="photos-remove" title="Удалить"></a>
-            </div>
-            <div class="photos__item">
-              <img src="" alt=""><span class="photos__name">Photo</span>
-              <a href="#" class="photos-remove" title="Удалить"></a>
-            </div>
-            <div class="photos__item">
-              <img src="" alt=""><span class="photos__name">Photo</span>
-              <a href="#" class="photos-remove" title="Удалить"></a>
-            </div>
-            <div class="photos__item">
-              <img src="" alt=""><span class="photos__name">Photo</span>
-              <a href="#" class="photos-remove" title="Удалить"></a>
-            </div>
-          </div>
-        </fieldset>
-  <!--=====Форма-Отправить==================================================-->
-          <input class="form__submit" type="submit" value="Отправить форму">
-        <span class="form-contest__header-box">*<span class="form-contest__header-box form-contest__header-box--black"> - Обязательные поля</span></span>
-      </form>
+          </fieldset>
+    <!--=====Форма-Отправить==================================================-->
+            <input class="form__submit" type="submit" value="Отправить форму">
+          <span class="form-contest__header-box">*<span class="form-contest__header-box form-contest__header-box--black"> - Обязательные поля</span></span>
+        </form>
+      </div>
     </main>
 
   <!--=====ФУТЕР==================================================-->
     <footer class="page-footer">
-      <div class="wrap"><!--нужна ли обёртка?-->
+      <div class="wrap">
         <div class="logo"></div>
         <ul class="social-buttons">
           <li class="social-buttons__item"><a href="#twitter" class="social-links" title="Twitter">Twitter</a></li>
