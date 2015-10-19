@@ -9,12 +9,10 @@
 .main-nav {
   display: none;
   position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
   z-index: 10;
-  width: 100%;
-  left: 0;
-  top: 0;
   background-color: @primary-color;
 
   &__list {
@@ -33,14 +31,12 @@
     a {
       display: inline-block;
       width: 100%;
-      line-height: 62px;
-      text-decoration: none;
-      font-family: @font;
-      font-size: @font-size + 8px;
-      font-weight: 600;
-      text-transform: uppercase;
+      font: 600 1.8rem/6.2rem @font;
       color: white;
+      text-decoration: none;
+      text-transform: uppercase;
     }
+
     a:hover{
       color: darken(white, 50%);
       background-color: lighten(#283645, 10%);
