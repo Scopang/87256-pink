@@ -1,19 +1,16 @@
 .text-title {
-  font: 100 2.4rem/3rem @font;
-  color: white;
-  text-align: center;
   margin: 0;
   padding: 0 20px;
+  font: 300 2.4rem/3rem @font;
+  color: white;
+  text-align: center;
 
   .page-header & {
-    margin-top: 18px;
+    margin-top: 20px;
   }
   .advantage-app & {
     color: @primary-color;
     line-height: 2.9rem;
-  }
-  .advantage-app &:last-of-type {
-    margin-bottom: 113px;
   }
   .contacts & {
     margin: 0 20px;
@@ -25,30 +22,35 @@
 }
 
 .text-primary {
+  margin: 0;
+  padding: 0 20px;
   font: 400 1.4rem/2.4rem @font;
   color: black;
   text-align: center;
-  margin: 0;
-  padding: 0 20px;
 
   .mob-app & {
     color: white;
   }
   .slider & {
+    padding-bottom: 33px;
     line-height: 3rem;
   }
 }
 
 .text-primary-bold {
+  margin: 0;
+  padding: 0 20px;
   font: 600 1.8rem/2.4rem @font;
   color: black;
   text-align: center;
-  margin: 0;
-  padding: 0 20px;
 
   .advantage-app & {
     margin: 31px 0 12px 0;
   }
+  .advantage-app:first-child & {
+    margin-top: 0;
+  }
+
   .slider & {
     margin-bottom: 16px;
   }
@@ -58,6 +60,6 @@
     text-transform: uppercase;
   }
   .contacts & {
-    margin: 28px 0 0 0;
+    margin-top: 28px;
   }
 }

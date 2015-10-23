@@ -2,9 +2,9 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=320px">
+    <meta name="viewport" content="initial-scale=1.0">
     <title>Pink</title>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
@@ -38,9 +38,7 @@
             </li>
           </ul>
         </nav>
-        <h1 class="text-title">
-          Взгляните на жизнь иначе!
-        </h1>
+        <h1 class="text-title">Взгляните на жизнь иначе!</h1>
       </div>
     </header>
 
@@ -67,19 +65,23 @@
         <h1 class="text-title">
           Устали от серости мегаполиса?<br><br>Нам есть, что вам предложить!
         </h1>
+      </div>
+      <div class="triangle">
     <!--=====Список преимуществ====================================================-->
-        <h2 class="text-primary-bold">Поднимает настроение</h2>
-        <p class="text-primary">
-            Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-        </p>
-        <h2 class="text-primary-bold">Меняет мир вокруг</h2>
-        <p class="text-primary">
-            Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-        </p>
-        <h2 class="text-primary-bold">Заводит новых друзей</h2>
-        <p class="text-primary">
-            Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-        </p>
+        <div class="wrap">
+          <h2 class="text-primary-bold">Поднимает настроение</h2>
+          <p class="text-primary">
+              Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+          </p>
+          <h2 class="text-primary-bold">Меняет мир вокруг</h2>
+          <p class="text-primary">
+              Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+          </p>
+          <h2 class="text-primary-bold">Заводит новых друзей</h2>
+          <p class="text-primary">
+              Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+          </p>
+        </div>
       </div>
     </section>
 
@@ -90,11 +92,6 @@
         <input class="slider__control" type="radio" id="review1" name="radio-review" checked>
         <input class="slider__control" type="radio" id="review2" name="radio-review">
         <input class="slider__control" type="radio" id="review3" name="radio-review">
-        <div class="slider__btn-group">
-          <label for="review1" class="slider__btn-item"></label>
-          <label for="review2" class="slider__btn-item"></label>
-          <label for="review3" class="slider__btn-item"></label>
-        </div>
         <blockquote class="slider-item slider-item--1">
           <h2 class="text-primary-bold">Николай Петров</h2>
           <p class="text-primary">
@@ -113,6 +110,11 @@
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!» «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!» «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
         </blockquote>
+        <div class="slider__btn-group">
+          <label for="review1" class="slider__btn-item"></label>
+          <label for="review2" class="slider__btn-item"></label>
+          <label for="review3" class="slider__btn-item"></label>
+        </div>
       </div>
     </section>
 
@@ -120,14 +122,9 @@
 
     <section class="prices">
       <div class="wrap">
-        <input class="prices__control" type="radio" id="prices1" name="prices" checked>
-        <input class="prices__control" type="radio" id="prices2" name="prices">
+        <input class="prices__control" type="radio" id="prices1" name="prices">
+        <input class="prices__control" type="radio" id="prices2" name="prices" checked>
         <input class="prices__control" type="radio" id="prices3" name="prices">
-        <div class="prices__btn-group">
-          <label for="prices1" class="prices__btn-item"></label>
-          <label for="prices2" class="prices__btn-item"></label>
-          <label for="prices3" class="prices__btn-item"></label>
-        </div>
         <table class="compare-table">
     <!--=====Заглавный ряд===================================================-->
           <tr class="compare-table__row">
@@ -190,6 +187,11 @@
             </td>
           </tr>
         </table>
+        <div class="prices__btn-group">
+          <label for="prices1" class="prices__btn-item"></label>
+          <label for="prices2" class="prices__btn-item"></label>
+          <label for="prices3" class="prices__btn-item"></label>
+        </div>
       </div>
     </section>
 

@@ -1,10 +1,10 @@
 .prices .wrap{
-  padding-top: 90px;
-  padding-bottom: 100px;
-  background: url('@{img}/background-1.png') no-repeat 100% 0px;
+  padding: 90px 0 46px 0;
+  overflow: hidden;
 }
 
 .prices {
+  background-color: @background-color;
 
   &__control {
     display: none;
@@ -15,19 +15,18 @@
   }
 
   &__btn-item {
-    display: inline-block;
-    height: 6px;
-    width: 6px;
-    border: 3px solid @primary-color;
-    border-radius: 12px;
-    background-color: white;
-    cursor: pointer;
+    .radio-btn-item;
+    background-color: #bec2c7;
+    border-color: @background-color;
   }
 }
 
 .compare-table {
   margin: 0 auto;
+  margin-bottom: 40px;
   border-collapse: collapse;
+  transition: transform 0.8s linear 0s;
+  overflow: hidden;
 
   &__row {
     border-bottom: 2px solid #e5e5e5;
@@ -44,7 +43,6 @@
     border-left: 2px solid #e5e5e5;
     border-right: 2px solid #e5e5e5;
   }
-
   &__data {
     height: 59px;
     padding: 0 20px;
@@ -67,10 +65,26 @@
   &--red-cross {
     background: url('@{img}/red-cross.png') no-repeat 50% 50%;
   }
-
   &--green-check {
     background: url('@{img}/green-check.png') no-repeat 50% 50%;
   }
 }
 
-
+input#prices1:checked ~ .compare-table {
+  transform: translateX(20px);
+}
+input#prices2:checked ~ .compare-table {
+  transform: translateX(-258px);
+}
+input#prices3:checked ~ .compare-table {
+  transform: translateX(-536px);
+}
+input#prices1:checked ~ .prices__btn-group .prices__btn-item:nth-child(1){
+  .radio-btn-item-active;
+}
+input#prices2:checked ~ .prices__btn-group .prices__btn-item:nth-child(2){
+  .radio-btn-item-active;
+}
+input#prices3:checked ~ .prices__btn-group .prices__btn-item:nth-child(3){
+  .radio-btn-item-active;
+}
